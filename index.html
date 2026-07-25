@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Green Sparks Kenya | Fighting Plastic Pollution, Planting Hope</title>
+<meta name="description" content="Green Sparks is a Kenyan environmental campaign fighting plastic pollution, promoting recycling, tree planting, and climate action.">
+
+<!-- Tailwind CSS (CDN) -->
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = {
+    darkMode: 'class',
+    theme: {
+      extend: {
+        fontFamily: { sans: ['Poppins', 'sans-serif'] },
+        colors: {
+          forest: { DEFAULT: '#166534', 50:'#f0fdf4',100:'#dcfce7',600:'#166534',700:'#14532d' },
+          emerald: { DEFAULT: '#22C55E' },
+          sky: { DEFAULT: '#0EA5E9' },
+          earth: { DEFAULT: '#7C5E3C' },
+        },
+        boxShadow: { glow: '0 0 40px rgba(34,197,94,0.35)' },
+      }
+    }
+  }
+</script>
+
+<!-- Google Fonts: Poppins -->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+<!-- Font Awesome -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+<!-- Shared styles -->
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white dark:bg-[#0b140f] text-gray-800 dark:text-gray-200 antialiased">
+
+<!-- Loading Screen -->
+<div id="loading-screen"><div class="leaf-spinner"></div></div>
+
+<!-- Navbar mount point (injected by components.js) -->
+<div id="navbar-mount"></div>
+
+<!-- ============ HERO ============ -->
+<header class="hero-bg min-h-screen flex items-center relative"
+  style="background-image:url('assets/images/bg.jpeg')">
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-32 w-full">
+    <div class="max-w-2xl">
+      <span class="reveal inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full text-xs font-semibold tracking-wide text-emerald-700 dark:text-emerald-300 mb-6">
+        <i class="fa-solid fa-earth-africa"></i> A Kenyan-led FCA climate movement
+      </span>
+      <h1 class="reveal text-4xl sm:text-5xl lg:text-6xl font-extrabold text-white leading-[1.08] tracking-tight" data-delay="1">
+        Every plastic collected. <span class="gradient-text">Recycling made.</span> A spark for Kenya's future.
+      </h1>
+      <p class="reveal text-gray-200 text-base sm:text-lg mt-6 leading-relaxed max-w-xl" data-delay="2">
+        Green Sparks mobilizes communities across Kenya to clean our coastlines and rivers, restore forest cover, and build lasting climate action — one neighborhood at a time.
+      </p>
+      <div class="reveal flex flex-wrap gap-4 mt-9" data-delay="3">
+        <a href="volunteer.html" class="px-7 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-glow transition inline-flex items-center gap-2">
+          <i class="fa-solid fa-hands-holding-child"></i> Join as Volunteer
+        </a>
+        <a href="volunteer.html#donate" class="px-7 py-3.5 rounded-full glass-card text-white font-semibold hover:bg-white/20 transition inline-flex items-center gap-2">
+          <i class="fa-solid fa-heart"></i> Donate Now
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- Impact Ribbon: signature glass stat strip overlapping hero bottom edge -->
+  <div class="absolute -bottom-16 left-0 right-0 z-20 px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto glass-card rounded-3xl grid grid-cols-2 md:grid-cols-4 gap-6 p-8 shadow-2xl reveal-scale" data-delay="1">
+      <div class="text-center">
+        <div class="text-3xl sm:text-4xl font-extrabold text-forest dark:text-emerald-400"><span data-counter="1" data-suffix="+">0</span></div>
+        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-1 font-medium">kg Plastic Collected</p>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl sm:text-4xl font-extrabold text-forest dark:text-emerald-400"><span data-counter="5" data-suffix="+">0</span></div>
+        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-1 font-medium">Trees Planted</p>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl sm:text-4xl font-extrabold text-forest dark:text-emerald-400"><span data-counter="9" data-suffix="+">0</span></div>
+        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-1 font-medium">Active Volunteers</p>
+      </div>
+      <div class="text-center">
+        <div class="text-3xl sm:text-4xl font-extrabold text-forest dark:text-emerald-400"><span data-counter="47" data-suffix="">0</span></div>
+        <p class="text-xs sm:text-sm text-gray-600 dark:text-gray-300 mt-1 font-medium">Communities Reached</p>
+      </div>
+    </div>
+  </div>
+</header>
+
+<!-- ============ ABOUT SUMMARY ============ -->
+<section class="pt-32 pb-20 bg-white dark:bg-[#0b140f]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-2 gap-14 items-center">
+    <div class="reveal-left relative">
+      <div class="rounded-3xl overflow-hidden shadow-xl img-zoom">
+        <img src="assets\images\WhatsApp Image 2026-07-25 at 10.04.42 PM.jpeg" alt="Volunteers planting trees in Kenya" class="w-full h-[420px] object-cover">
+      </div>
+      <div class="hidden sm:flex absolute -bottom-8 -right-8 glass-card rounded-2xl p-5 items-center gap-3 shadow-xl w-56">
+        <span class="w-12 h-12 rounded-full bg-sky-500/90 flex items-center justify-center shrink-0"><i class="fa-solid fa-droplet text-white"></i></span>
+        <div>
+          <p class="text-sm font-bold text-forest dark:text-emerald-400">12 Counties</p>
+          <p class="text-xs text-gray-500 dark:text-gray-400">clean-water rivers restored</p>
+        </div>
+      </div>
+    </div>
+    <div class="reveal-right">
+      <span class="text-emerald-600 dark:text-emerald-400 font-semibold text-sm tracking-widest uppercase">Who We Are</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-3 mb-5 leading-tight">About Green Sparks</h2>
+      <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-4">
+        Green Sparks is a community-powered environmental campaign born on fca students group</p>
+      <p class="text-gray-600 dark:text-gray-300 leading-relaxed mb-8">
+        From dandora  to Nairobi's rivers and the Rift Valley's forests, we want to partner with schools, county governments, and local leaders to turn environmental awareness into measurable action.
+      </p>
+      <div class="grid grid-cols-2 gap-4 mb-8">
+        <div class="flex items-start gap-3">
+          <span class="w-10 h-10 rounded-xl bg-emerald-100 dark:bg-emerald-900/40 flex items-center justify-center shrink-0"><i class="fa-solid fa-recycle text-forest dark:text-emerald-400"></i></span>
+          <p class="text-sm text-gray-700 dark:text-gray-300 font-medium pt-2">Recycling &amp; waste reduction programs</p>
+        </div>
+        <div class="flex items-start gap-3">
+          <span class="w-10 h-10 rounded-xl bg-sky-100 dark:bg-sky-900/40 flex items-center justify-center shrink-0"><i class="fa-solid fa-seedling text-sky-600 dark:text-sky-400"></i></span>
+          <p class="text-sm text-gray-700 dark:text-gray-300 font-medium pt-2">Reforestation &amp; tree-planting drives</p>
+        </div>
+      </div>
+      <a href="about.html" class="inline-flex items-center gap-2 text-forest dark:text-emerald-400 font-semibold hover:gap-3 transition-all">
+        Learn our full story <i class="fa-solid fa-arrow-right"></i>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ MISSION / VISION / VALUES ============ -->
+<section class="py-20 bg-gradient-to-b from-emerald-50 to-white dark:from-[#0f1f16] dark:to-[#0b140f] relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+      <span class="text-emerald-600 dark:text-emerald-400 font-semibold text-sm tracking-widest uppercase">What Drives Us</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-3">Mission, Vision &amp; Core Values</h2>
+    </div>
+
+    <div class="grid md:grid-cols-2 gap-6 mb-6">
+      <div class="reveal-left glass-card rounded-3xl p-8 hover-lift">
+        <span class="w-14 h-14 rounded-2xl bg-forest flex items-center justify-center mb-5"><i class="fa-solid fa-bullseye text-white text-xl"></i></span>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Our Mission</h3>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">To mobilize Kenyan communities to reduce plastic pollution, restore green cover, and build climate resilience through hands-on action and environmental education.</p>
+      </div>
+      <div class="reveal-right glass-card rounded-3xl p-8 hover-lift">
+        <span class="w-14 h-14 rounded-2xl bg-sky-500 flex items-center justify-center mb-5"><i class="fa-solid fa-eye text-white text-xl"></i></span>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-3">Our Vision</h3>
+        <p class="text-gray-600 dark:text-gray-300 leading-relaxed">A Kenya where every community, river, and forest thrives free of plastic waste — sustained by communities who see themselves as its guardians.</p>
+      </div>
+    </div>
+
+    <div class="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
+      <div class="reveal glass-card rounded-2xl p-6 hover-lift" data-delay="1">
+        <i class="fa-solid fa-people-group text-2xl text-forest dark:text-emerald-400 mb-3"></i>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Community First</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-400">Local people leading local solutions.</p>
+      </div>
+      <div class="reveal glass-card rounded-2xl p-6 hover-lift" data-delay="2">
+        <i class="fa-solid fa-hands-holding-circle text-2xl text-sky-600 dark:text-sky-400 mb-3"></i>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Integrity</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-400">Transparent about our impact and funding.</p>
+      </div>
+      <div class="reveal glass-card rounded-2xl p-6 hover-lift" data-delay="3">
+        <i class="fa-solid fa-tree text-2xl text-earth mb-3"></i>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Sustainability</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-400">Solutions built to outlast a single campaign.</p>
+      </div>
+      <div class="reveal glass-card rounded-2xl p-6 hover-lift" data-delay="4">
+        <i class="fa-solid fa-graduation-cap text-2xl text-emerald-500 mb-3"></i>
+        <h4 class="font-semibold text-gray-900 dark:text-white mb-1">Education</h4>
+        <p class="text-sm text-gray-600 dark:text-gray-400">Knowledge that turns awareness into action.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ FEATURED CAMPAIGNS ============ -->
+<section class="py-20 bg-white dark:bg-[#0b140f]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-12 reveal">
+      <div>
+        <span class="text-emerald-600 dark:text-emerald-400 font-semibold text-sm tracking-widest uppercase">Take Action</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-3">Featured Campaigns</h2>
+      </div>
+      <a href="campaigns.html" class="text-forest dark:text-emerald-400 font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">View all campaigns <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="reveal rounded-3xl overflow-hidden shadow-lg hover-lift bg-white dark:bg-[#132119]" data-delay="1">
+        <div class="img-zoom relative h-56 overflow-hidden">
+          <img src="assets\images\mathare.jpeg" class="w-full h-full object-cover" alt="river clean-up campaign">
+          <span class="absolute top-4 left-4 bg-sky-500 text-white text-xs font-bold px-3 py-1.5 rounded-full">Ongoing</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-2">#PlasticFreeNairobi</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">Weekly clean-ups along Nairobi and its environments, removing single-use plastics before they reach the rivers.</p>
+          <a href="campaigns.html" class="text-sm font-semibold text-forest dark:text-emerald-400 inline-flex items-center gap-2">Read more <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+      </div>
+
+      <div class="reveal rounded-3xl overflow-hidden shadow-lg hover-lift bg-white dark:bg-[#132119]" data-delay="2">
+        <div class="img-zoom relative h-56 overflow-hidden">
+          <img src="assets\images\enviromental education.jpeg" class="w-full h-full object-cover" alt="Tree planting campaign">
+          <span class="absolute top-4 left-4 bg-emerald-500 text-white text-xs font-bold px-3 py-1.5 rounded-full">Ongoing</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-2">10 Trees</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">A nationwide push to restore forest cover with indigenous species across degraded water catchment areas.</p>
+          <a href="campaigns.html" class="text-sm font-semibold text-forest dark:text-emerald-400 inline-flex items-center gap-2">Read more <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+      </div>
+
+      <div class="reveal rounded-3xl overflow-hidden shadow-lg hover-lift bg-white dark:bg-[#132119]" data-delay="3">
+        <div class="img-zoom relative h-56 overflow-hidden">
+          <img src="assets\images\images recycle in school.jpeg" class="w-full h-full object-cover" alt="Schools recycling program">
+          <span class="absolute top-4 left-4 bg-earth text-white text-xs font-bold px-3 py-1.5 rounded-full">New</span>
+        </div>
+        <div class="p-6">
+          <h3 class="font-bold text-lg text-gray-900 dark:text-white mb-2">Recycle in Schools</h3>
+          <p class="text-sm text-gray-600 dark:text-gray-400 leading-relaxed mb-4">we want to Equipe 20+ schools with recycling stations and a youth-led environmental curriculum.</p>
+          <a href="campaigns.html" class="text-sm font-semibold text-forest dark:text-emerald-400 inline-flex items-center gap-2">Read more <i class="fa-solid fa-arrow-right text-xs"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ PROJECTS PREVIEW ============ -->
+<section class="py-20 leaf-pattern-bg bg-forest relative overflow-hidden">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center max-w-2xl mx-auto mb-14 reveal">
+      <span class="text-emerald-300 font-semibold text-sm tracking-widest uppercase">Our Work On The Ground</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Featured Projects</h2>
+    </div>
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="reveal glass-dark rounded-3xl p-7 hover-lift" data-delay="1">
+        <div class="rounded-2xl overflow-hidden mb-5 img-zoom h-40">
+          <img src="assets\images\dandora.jpeg" class="w-full h-full object-cover" alt="Dandora Green Space">
+        </div>
+        <h3 class="text-white font-bold mb-2">Dandora Green Space</h3>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4">managing number of waste bins and promoting recycling initiatives.</p>
+        <div class="w-full bg-white/10 rounded-full h-2 mb-2"><div class="bg-emerald-400 h-2 rounded-full" style="width:72%"></div></div>
+        <p class="text-xs text-gray-400">72% waste reduction</p>
+      </div>
+      <div class="reveal glass-dark rounded-3xl p-7 hover-lift" data-delay="2">
+        <div class="rounded-2xl overflow-hidden mb-5 img-zoom h-40">
+          <img src="assets\images\platic rysycling.jpeg" class="w-full h-full object-cover" alt="Recycling hub">
+        </div>
+        <h3 class="text-white font-bold mb-2">Nairobi River Recycling Hub</h3>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4">A community-run collection point converting river-bound plastic into building materials.</p>
+        <div class="w-full bg-white/10 rounded-full h-2 mb-2"><div class="bg-sky-400 h-2 rounded-full" style="width:58%"></div></div>
+        <p class="text-xs text-gray-400">2 tonnes processed this year</p>
+      </div>
+      <div class="reveal glass-dark rounded-3xl p-7 hover-lift" data-delay="3">
+        <div class="rounded-2xl overflow-hidden mb-5 img-zoom h-40">
+          <img src="assets\images\tree planting.jpeg" class="w-full h-full object-cover" alt="Rift valley forest">
+        </div>
+        <h3 class="text-white font-bold mb-2">karura forest</h3>
+        <p class="text-gray-300 text-sm leading-relaxed mb-4">planting tree with a purpose.</p>
+        <div class="w-full bg-white/10 rounded-full h-2 mb-2"><div class="bg-earth h-2 rounded-full" style="width:64%"></div></div>
+        <p class="text-xs text-gray-400">1 tree every birthday</p>
+      </div>
+    </div>
+    <div class="text-center mt-12 reveal">
+      <a href="projects.html" class="px-7 py-3 rounded-full bg-white text-forest font-semibold hover:bg-emerald-50 transition inline-flex items-center gap-2">See all projects <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+  </div>
+</section>
+
+<!-- ============ UPCOMING EVENTS PREVIEW ============ -->
+<section class="py-20 bg-white dark:bg-[#0b140f]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="flex flex-wrap items-end justify-between gap-6 mb-12 reveal">
+      <div>
+        <span class="text-emerald-600 dark:text-emerald-400 font-semibold text-sm tracking-widest uppercase">Mark Your Calendar</span>
+        <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-3">Upcoming Events</h2>
+      </div>
+      <a href="events.html" class="text-forest dark:text-emerald-400 font-semibold inline-flex items-center gap-2 hover:gap-3 transition-all">View full calendar <i class="fa-solid fa-arrow-right"></i></a>
+    </div>
+
+    <div class="grid md:grid-cols-3 gap-6">
+      <div class="reveal glass-card rounded-2xl p-6 flex gap-5 hover-lift" data-delay="1">
+        <div class="shrink-0 w-16 h-16 rounded-2xl bg-forest text-white flex flex-col items-center justify-center">
+          <span class="text-xl font-extrabold leading-none">14</span>
+          <span class="text-[10px] uppercase tracking-wide">Aug</span>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-1">korogocho river</h4>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mb-2"><i class="fa-solid fa-location-dot mr-1"></i>Diani Beach, Kwale</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Join 10+ volunteers for our biggest  clean-up of the year.</p>
+        </div>
+      </div>
+      <div class="reveal glass-card rounded-2xl p-6 flex gap-5 hover-lift" data-delay="2">
+        <div class="shrink-0 w-16 h-16 rounded-2xl bg-sky-500 text-white flex flex-col items-center justify-center">
+          <span class="text-xl font-extrabold leading-none">02</span>
+          <span class="text-[10px] uppercase tracking-wide">Sep</span>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-1">Nairobi Tree-Planting Day</h4>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mb-2"><i class="fa-solid fa-location-dot mr-1"></i>Ngong Road Forest</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Family-friendly planting event with 5 indigenous seedlings.</p>
+        </div>
+      </div>
+      <div class="reveal glass-card rounded-2xl p-6 flex gap-5 hover-lift" data-delay="3">
+        <div class="shrink-0 w-16 h-16 rounded-2xl bg-earth text-white flex flex-col items-center justify-center">
+          <span class="text-xl font-extrabold leading-none">21</span>
+          <span class="text-[10px] uppercase tracking-wide">Sep</span>
+        </div>
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-1">Climate Action Youth Summit</h4>
+          <p class="text-xs text-gray-500 dark:text-gray-400 mb-2"><i class="fa-solid fa-location-dot mr-1"></i>FCA JERICHO</p>
+          <p class="text-sm text-gray-600 dark:text-gray-300">A day of workshops for youth climate leaders across Kenya.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+<!-- ============ PARTNERS & SPONSORS ============ -->
+<section class="py-16 bg-white dark:bg-[#0b140f] border-y border-gray-100 dark:border-white/5">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <p class="text-center text-sm font-semibold tracking-widest uppercase text-gray-400 mb-10 reveal">MAKE A DATE TO PARTNER WITH US EITHER AS A CORPORATE SPONSOR OR COMMUNITY PARTNER</p>
+    <div class="grid grid-cols-3 md:grid-cols-6 gap-8 items-center opacity-80 reveal">
+      <div class="text-center font-bold text-gray-400 dark:text-gray-500"><i class="fa-solid fa-building-columns text-3xl block mb-1"></i>Gov. Kenya</div>
+      <div class="text-center font-bold text-gray-400 dark:text-gray-500"><i class="fa-solid fa-water text-3xl block mb-1"></i>Green Nairobi</div>
+      <div class="text-center font-bold text-gray-400 dark:text-gray-500"><i class="fa-solid fa-seedling text-3xl block mb-1"></i>EcoFund</div>
+      <div class="text-center font-bold text-gray-400 dark:text-gray-500"><i class="fa-solid fa-graduation-cap text-3xl block mb-1"></i>SchoolsKE</div>
+      <div class="text-center font-bold text-gray-400 dark:text-gray-500"><i class="fa-solid fa-industry text-3xl block mb-1"></i>fca youths</div>
+      <div class="text-center font-bold text-gray-400 dark:text-gray-500"><i class="fa-solid fa-globe text-3xl block mb-1"></i>UN Habitat</div>
+    </div>
+  </div>
+</section>
+
+<!-- ============ NEWSLETTER CTA ============ -->
+<section class="py-20 bg-forest relative overflow-hidden leaf-pattern-bg">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8 text-center relative z-10 reveal">
+    <i class="fa-solid fa-envelope-open-text text-4xl text-emerald-300 mb-5"></i>
+    <h2 class="text-3xl font-extrabold text-white mb-3">Join Our Newsletter</h2>
+    <p class="text-gray-300 mb-8">Get monthly impact reports, upcoming clean-ups, and ways to get involved — straight to your inbox.</p>
+    <form id="page-newsletter-form" novalidate class="flex flex-col sm:flex-row gap-3 max-w-md mx-auto">
+      <input type="email" id="page-newsletter-email" placeholder="Enter your email" class="gs-input flex-1 px-5 py-3.5 rounded-full border border-white/20 bg-white/10 text-white placeholder-gray-400 text-sm">
+      <button type="submit" class="px-7 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold transition">Subscribe</button>
+    </form>
+    <p id="page-newsletter-msg" class="text-sm mt-3 gs-error-msg"></p>
+  </div>
+</section>
+
+<!-- Footer mount point -->
+<div id="footer-mount"></div>
+
+<!-- Back to top -->
+<button id="back-to-top" aria-label="Back to top" class="gs-hidden-btn fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-xl flex items-center justify-center">
+  <i class="fa-solid fa-arrow-up"></i>
+</button>
+
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

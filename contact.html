@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Contact Us | Green Sparks Kenya</title>
+<meta name="description" content="Get in touch with Green Sparks — find our office, send a message, or reach out about partnerships.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { darkMode:'class', theme:{ extend:{ fontFamily:{sans:['Poppins','sans-serif']},
+    colors:{ forest:{DEFAULT:'#166534'}, emerald:{DEFAULT:'#22C55E'}, sky:{DEFAULT:'#0EA5E9'}, earth:{DEFAULT:'#7C5E3C'} },
+    boxShadow:{glow:'0 0 40px rgba(34,197,94,0.35)'} } } }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white dark:bg-[#0b140f] text-gray-800 dark:text-gray-200 antialiased">
+
+<div id="loading-screen"><div class="leaf-spinner"></div></div>
+<div id="navbar-mount"></div>
+
+<header class="hero-bg pt-40 pb-28 relative" style="background-image:url('https://images.unsplash.com/photo-1444723121867-7a241cacace9?auto=format&fit=crop&w=1600&q=80')">
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <span class="reveal inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full text-xs font-semibold text-emerald-700 dark:text-emerald-300 mb-5">Contact Us</span>
+    <h1 class="reveal text-4xl sm:text-5xl font-extrabold text-white leading-tight" data-delay="1">Let's talk <span class="gradient-text">climate action</span></h1>
+    <p class="reveal text-gray-200 mt-5 max-w-xl mx-auto" data-delay="2">Questions, partnership ideas, media requests — we'd love to hear from you.</p>
+  </div>
+</header>
+
+<section class="py-20 bg-white dark:bg-[#0b140f]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid lg:grid-cols-5 gap-10">
+
+    <!-- Contact info -->
+    <div class="lg:col-span-2 space-y-5 reveal-left">
+      <div class="glass-card rounded-2xl p-6 flex items-start gap-4 hover-lift">
+        <span class="w-12 h-12 rounded-xl bg-forest flex items-center justify-center shrink-0"><i class="fa-solid fa-location-dot text-white"></i></span>
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-1">Our Office</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">Kilimani Business Centre, 3rd Floor<br>Argwings Kodhek Rd, Nairobi, Kenya</p>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-6 flex items-start gap-4 hover-lift">
+        <span class="w-12 h-12 rounded-xl bg-sky-500 flex items-center justify-center shrink-0"><i class="fa-solid fa-envelope text-white"></i></span>
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-1">Email Us</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">hello@greensparks.or.ke<br>partnerships@greensparks.or.ke</p>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-6 flex items-start gap-4 hover-lift">
+        <span class="w-12 h-12 rounded-xl bg-earth flex items-center justify-center shrink-0"><i class="fa-solid fa-phone text-white"></i></span>
+        <div>
+          <h4 class="font-bold text-gray-900 dark:text-white mb-1">Call Us</h4>
+          <p class="text-sm text-gray-600 dark:text-gray-300">+254 700 456 789<br>Mon – Fri, 8:00 AM – 5:00 PM</p>
+        </div>
+      </div>
+      <div class="glass-card rounded-2xl p-6 hover-lift">
+        <h4 class="font-bold text-gray-900 dark:text-white mb-3">Follow Us</h4>
+        <div class="flex gap-3">
+          <a href="#" class="w-10 h-10 rounded-full bg-forest/10 dark:bg-white/10 hover:bg-emerald-500 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+          <a href="#" class="w-10 h-10 rounded-full bg-forest/10 dark:bg-white/10 hover:bg-emerald-500 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-x-twitter text-sm"></i></a>
+          <a href="#" class="w-10 h-10 rounded-full bg-forest/10 dark:bg-white/10 hover:bg-emerald-500 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+          <a href="#" class="w-10 h-10 rounded-full bg-forest/10 dark:bg-white/10 hover:bg-emerald-500 hover:text-white flex items-center justify-center transition"><i class="fa-brands fa-youtube text-sm"></i></a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Contact form -->
+    <div class="lg:col-span-3 reveal-right">
+      <div class="glass-card rounded-3xl p-6 sm:p-9">
+        <div id="contact-success" class="hidden text-center py-14">
+          <i class="fa-solid fa-circle-check text-5xl text-emerald-500 mb-4"></i>
+          <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">Message sent!</h3>
+          <p class="text-gray-600 dark:text-gray-300">Thanks for reaching out — our team typically replies within 2 business days.</p>
+        </div>
+
+        <form id="contact-form" novalidate class="space-y-5">
+          <div class="grid sm:grid-cols-2 gap-5">
+            <div>
+              <label for="c-name" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">Full Name</label>
+              <input type="text" id="c-name" class="gs-input w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-sm">
+              <p id="c-name-error" class="gs-error-msg text-xs text-red-500 mt-1"></p>
+            </div>
+            <div>
+              <label for="c-email" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">Email Address</label>
+              <input type="email" id="c-email" class="gs-input w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-sm">
+              <p id="c-email-error" class="gs-error-msg text-xs text-red-500 mt-1"></p>
+            </div>
+          </div>
+          <div>
+            <label for="c-subject" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">Subject</label>
+            <input type="text" id="c-subject" class="gs-input w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-sm">
+            <p id="c-subject-error" class="gs-error-msg text-xs text-red-500 mt-1"></p>
+          </div>
+          <div>
+            <label for="c-message" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">Message</label>
+            <textarea id="c-message" rows="5" class="gs-input w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-sm"></textarea>
+            <p id="c-message-error" class="gs-error-msg text-xs text-red-500 mt-1"></p>
+          </div>
+          <button type="submit" class="w-full py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-glow transition">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Google Maps -->
+<section class="pb-20 bg-white dark:bg-[#0b140f]">
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+    <div class="rounded-3xl overflow-hidden shadow-xl border border-gray-100 dark:border-white/10 h-96">
+      <iframe
+        title="Green Sparks office location on Google Maps"
+        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d63779.4!2d36.78!3d-1.2921!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1172d84d49a7%3A0x4325c92583512d21!2sNairobi%2C%20Kenya!5e0!3m2!1sen!2ske!4v1690000000000"
+        width="100%" height="100%" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
+    </div>
+  </div>
+</section>
+
+<div id="footer-mount"></div>
+<button id="back-to-top" aria-label="Back to top" class="gs-hidden-btn fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-xl flex items-center justify-center"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>

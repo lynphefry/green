@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Volunteer & Donate | Green Sparks Kenya</title>
+<meta name="description" content="Register to volunteer with Green Sparks or donate to support plastic clean-ups, tree planting, and climate education in Kenya.">
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+  tailwind.config = { darkMode:'class', theme:{ extend:{ fontFamily:{sans:['Poppins','sans-serif']},
+    colors:{ forest:{DEFAULT:'#166534'}, emerald:{DEFAULT:'#22C55E'}, sky:{DEFAULT:'#0EA5E9'}, earth:{DEFAULT:'#7C5E3C'} },
+    boxShadow:{glow:'0 0 40px rgba(34,197,94,0.35)'} } } }
+</script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+<link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body class="bg-white dark:bg-[#0b140f] text-gray-800 dark:text-gray-200 antialiased">
+
+<div id="loading-screen"><div class="leaf-spinner"></div></div>
+<div id="navbar-mount"></div>
+
+<header class="hero-bg pt-40 pb-28 relative" style="background-image:url('assets/images/voluntering.jpeg')">
+  <div class="absolute inset-0 hero-overlay"></div>
+  <div class="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <span class="reveal inline-flex items-center gap-2 glass-card px-4 py-2 rounded-full text-xs font-semibold text-emerald-700 dark:text-emerald-300 mb-5">Get Involved</span>
+    <h1 class="reveal text-4xl sm:text-5xl font-extrabold text-white leading-tight" data-delay="1">Give your time. <span class="gradient-text">Or give your support.</span></h1>
+    <p class="reveal text-gray-200 mt-5 max-w-xl mx-auto" data-delay="2">Both matter. Both move the work forward.</p>
+  </div>
+</header>
+
+<!-- ============ VOLUNTEER REGISTRATION FORM ============ -->
+<section id="volunteer-form-section" class="py-20 bg-white dark:bg-[#0b140f]">
+  <div class="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+    <div class="text-center mb-12 reveal">
+      <span class="text-emerald-600 dark:text-emerald-400 font-semibold text-sm tracking-widest uppercase">Volunteer With Us</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-gray-900 dark:text-white mt-3">Register as a Volunteer</h2>
+      <p class="text-gray-600 dark:text-gray-300 mt-3">Tell us about yourself and we'll match you with clean-ups, planting days, or programs near you.</p>
+    </div>
+
+    <div class="glass-card rounded-3xl p-6 sm:p-10 reveal-scale">
+      <!-- Success message (shown after valid submit) -->
+      <div id="volunteer-success" class="hidden text-center py-10">
+        <i class="fa-solid fa-circle-check text-5xl text-emerald-500 mb-4"></i>
+        <h3 class="text-xl font-bold text-gray-900 dark:text-white mb-2">You're registered!</h3>
+        <p class="text-gray-600 dark:text-gray-300">Thank you for joining Green Sparks. Our team will reach out with the next volunteering opportunity near you.</p>
+      </div>
+
+      <form id="volunteer-form" novalidate class="space-y-5">
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="v-name" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">Full Name</label>
+            <input type="text" id="v-name" name="name" class="gs-input w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-sm">
+            <p id="v-name-error" class="gs-error-msg text-xs text-red-500 mt-1"></p>
+          </div>
+          <div>
+            <label for="v-email" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">Email Address</label>
+            <input type="email" id="v-email" name="email" class="gs-input w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-sm">
+            <p id="v-email-error" class="gs-error-msg text-xs text-red-500 mt-1"></p>
+          </div>
+        </div>
+
+        <div class="grid sm:grid-cols-2 gap-5">
+          <div>
+            <label for="v-phone" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">Phone Number</label>
+            <input type="tel" id="v-phone" name="phone" placeholder="+254 7XX XXX XXX" class="gs-input w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-sm">
+            <p id="v-phone-error" class="gs-error-msg text-xs text-red-500 mt-1"></p>
+          </div>
+          <div>
+            <label for="v-location" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">County / Town</label>
+            <input type="text" id="v-location" name="location" class="gs-input w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-sm">
+            <p id="v-location-error" class="gs-error-msg text-xs text-red-500 mt-1"></p>
+          </div>
+        </div>
+
+        <div>
+          <label class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-2">Areas of Interest</label>
+          <div class="grid sm:grid-cols-2 gap-3">
+            <label class="flex items-center gap-2 px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 cursor-pointer text-sm">
+              <input type="checkbox" name="interest" value="cleanups" class="accent-emerald-500 w-4 h-4"> Beach &amp; River Clean-Ups
+            </label>
+            <label class="flex items-center gap-2 px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 cursor-pointer text-sm">
+              <input type="checkbox" name="interest" value="planting" class="accent-emerald-500 w-4 h-4"> Tree Planting
+            </label>
+            <label class="flex items-center gap-2 px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 cursor-pointer text-sm">
+              <input type="checkbox" name="interest" value="education" class="accent-emerald-500 w-4 h-4"> Schools &amp; Education
+            </label>
+            <label class="flex items-center gap-2 px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 cursor-pointer text-sm">
+              <input type="checkbox" name="interest" value="events" class="accent-emerald-500 w-4 h-4"> Event Support
+            </label>
+          </div>
+          <p id="v-interest-error" class="gs-error-msg text-xs text-red-500 mt-1"></p>
+        </div>
+
+        <div>
+          <label for="v-message" class="block text-sm font-semibold text-gray-700 dark:text-gray-200 mb-1.5">Anything else we should know? <span class="text-gray-400 font-normal">(optional)</span></label>
+          <textarea id="v-message" name="message" rows="3" class="gs-input w-full px-4 py-3 rounded-xl border border-gray-200 dark:border-white/10 bg-white dark:bg-white/5 text-sm"></textarea>
+        </div>
+
+        <label class="flex items-start gap-3 text-sm text-gray-600 dark:text-gray-300">
+          <input type="checkbox" id="v-terms" class="accent-emerald-500 w-4 h-4 mt-0.5">
+          I agree to be contacted by Green Sparks about volunteering opportunities.
+        </label>
+        <p id="v-terms-error" class="gs-error-msg text-xs text-red-500"></p>
+
+        <button type="submit" class="w-full py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold shadow-glow transition">Submit Registration</button>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- ============ DONATE SECTION ============ -->
+<section id="donate" class="py-20 leaf-pattern-bg bg-forest relative overflow-hidden">
+  <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+    <div class="text-center mb-12 reveal">
+      <span class="text-emerald-300 font-semibold text-sm tracking-widest uppercase">Fuel The Work</span>
+      <h2 class="text-3xl sm:text-4xl font-extrabold text-white mt-3">Make a Donation</h2>
+      <p class="text-gray-300 mt-3 max-w-xl mx-auto">Every contribution funds clean-up gear, tree seedlings, and school programs across Kenya.</p>
+    </div>
+
+    <div class="glass-dark rounded-3xl p-6 sm:p-10 reveal-scale">
+      <div class="grid sm:grid-cols-3 gap-6 mb-8">
+        <div class="glass-card rounded-2xl p-5 text-center">
+          <i class="fa-solid fa-seedling text-2xl text-emerald-500 mb-2"></i>
+          <p class="font-bold text-gray-900 dark:text-white">KES 500</p>
+          <p class="text-xs text-gray-600 dark:text-gray-300">Plants 10 tree seedlings</p>
+        </div>
+        <div class="glass-card rounded-2xl p-5 text-center">
+          <i class="fa-solid fa-recycle text-2xl text-sky-500 mb-2"></i>
+          <p class="font-bold text-gray-900 dark:text-white">KES 2,000</p>
+          <p class="text-xs text-gray-600 dark:text-gray-300">Funds a school recycling kit</p>
+        </div>
+        <div class="glass-card rounded-2xl p-5 text-center">
+          <i class="fa-solid fa-people-group text-2xl text-earth mb-2"></i>
+          <p class="font-bold text-gray-900 dark:text-white">KES 5,000</p>
+          <p class="text-xs text-gray-600 dark:text-gray-300">Supports one clean-up crew</p>
+        </div>
+      </div>
+
+      <p class="text-white font-semibold text-sm mb-3">Choose an amount (KES)</p>
+      <div class="flex flex-wrap gap-3 mb-5">
+        <button type="button" data-donate-amount="500" class="px-5 py-2.5 rounded-full border-2 border-white/20 bg-white text-gray-700 text-sm font-semibold transition">500</button>
+        <button type="button" data-donate-amount="1000" class="px-5 py-2.5 rounded-full border-2 border-white/20 bg-white text-gray-700 text-sm font-semibold transition">1,000</button>
+        <button type="button" data-donate-amount="2500" class="px-5 py-2.5 rounded-full border-2 border-white/20 bg-white text-gray-700 text-sm font-semibold transition">2,500</button>
+        <button type="button" data-donate-amount="5000" class="px-5 py-2.5 rounded-full border-2 border-white/20 bg-white text-gray-700 text-sm font-semibold transition">5,000</button>
+      </div>
+
+      <div class="flex flex-col sm:flex-row gap-3">
+        <input type="number" id="donate-custom-amount" min="1" placeholder="Or enter a custom amount" class="gs-input flex-1 px-5 py-3.5 rounded-full border border-white/20 bg-white/10 text-white placeholder-gray-300 text-sm">
+        <button type="button" class="px-8 py-3.5 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white font-semibold transition inline-flex items-center gap-2 justify-center">
+          <i class="fa-solid fa-heart"></i> Donate Now
+        </button>
+      </div>
+      <p class="text-xs text-gray-400 mt-4 text-center">Secure payments via M-Pesa, Visa, and Mastercard. Green Sparks is a registered non-profit in Kenya.</p>
+    </div>
+  </div>
+</section>
+
+<div id="footer-mount"></div>
+<button id="back-to-top" aria-label="Back to top" class="gs-hidden-btn fixed bottom-6 right-6 z-50 w-12 h-12 rounded-full bg-emerald-500 hover:bg-emerald-600 text-white shadow-xl flex items-center justify-center"><i class="fa-solid fa-arrow-up"></i></button>
+
+<script src="assets/js/components.js"></script>
+<script src="assets/js/main.js"></script>
+</body>
+</html>
