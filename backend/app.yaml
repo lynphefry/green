@@ -1,0 +1,16 @@
+runtime: nodejs18
+
+env: standard
+
+env_variables:
+  MONGODB_URI: ${MONGODB_URI}
+  EMAIL_USER: ${EMAIL_USER}
+  EMAIL_PASSWORD: ${EMAIL_PASSWORD}
+  EMAIL_SERVICE: "gmail"
+  ADMIN_EMAIL: "lynphefry@gmail.com"
+  JWT_SECRET: ${JWT_SECRET}
+  FRONTEND_URL: "https://green-pi-wine.vercel.app"
+
+handlers:
+- url: /.*
+  script: auto
