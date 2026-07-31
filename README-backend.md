@@ -16,13 +16,31 @@ Environment variables
 - FRONTEND_ORIGIN (optional) — CORS origin to allow (defaults to '*')
 - PORT (optional) — port to run the server on (default 3000)
 
+Recommended .env (example)
+# Set the admin email to receive notifications
+ADMIN_EMAIL=lynphefry@gmail.com
+FROM_EMAIL=no-reply@yourdomain.com
+
+# Either SendGrid (recommended for deliverability)
+SENDGRID_API_KEY=SG.xxxxx
+
+# Or SMTP fallback
+# SMTP_HOST=smtp.example.com
+# SMTP_PORT=587
+# SMTP_USER=user
+# SMTP_PASS=pass
+
+# Optional
+FRONTEND_ORIGIN=https://green-pi-wine.vercel.app
+PORT=3000
+
 Usage (development)
 1. Create a `.env` file (do NOT commit it) with the variables above.
 2. Install dependencies: `npm install`
 3. Run: `npm run dev` (requires nodemon) or `npm start`
 
 Deployment
-- Deploy to any Node-capable host (Render, Heroku, Railway, VPS).
+- Deploy to any Node-capable host (Render, Heroku, Railway, Vercel).
 - Add the required env vars in the host's dashboard (ADMIN_EMAIL and a mail provider key).
 
 Security notes
